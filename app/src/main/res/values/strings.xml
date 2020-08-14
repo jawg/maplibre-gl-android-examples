@@ -1,0 +1,33 @@
+<resources>
+    <!-- App values -->
+    <string name="app_name">Mobile Maps with Jawg</string>
+
+    <!-- Jawg API constants -->
+    <string name="jawg_styles_url">https://api.jawg.io/styles/</string>
+    <string name="jawg_access_token"></string> <!-- <= Your token here -->
+    <!-- styles -->
+    <string-array name="jawg_styles">
+        <item>jawg-streets</item>
+        <item>jawg-terrain</item>
+        <item>jawg-sunny</item>
+        <item>jawg-dark</item>
+        <item>jawg-light</item>
+    </string-array>
+    <!-- languages -->
+    <string-array name="jawg_languages">
+        <item>en</item>
+        <item>de</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>it</item>
+        <item>nl</item>
+        <item>zh</item>
+    </string-array>
+    <!-- description -->
+    <string name="jawg_description">
+        This App contains some examples of what you can build with Jawg Maps.
+        The possibilities are infinite but you can navigate below through some basic features and see how they are
+        implemented (very easily !).
+        To get more information about Jawg Maps, please refer to jawg.io/docs.
+    </string>
+</resources>

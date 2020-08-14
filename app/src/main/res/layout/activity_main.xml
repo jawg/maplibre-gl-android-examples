@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:contentDescription="JawgLogo"
+                android:src="@drawable/jawg_maps_banner" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/crete_round"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text="@string/jawg_description"
+                android:textAlignment="viewStart"
+                android:justificationMode="inter_word" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/buttonToClassicMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Classic Map"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonToStylesMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Different Styles"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonToCustomMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Custom Style"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonToAddAMarker"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Map with marker"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/buttonToPopupMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Map with Popup"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonToLanguageMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Switch Languages"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonToGeometryMap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Geometry on Map"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round" />
+
+                <Button
+                    android:id="@+id/buttonInvisible"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Invisible example"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/crete_round"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

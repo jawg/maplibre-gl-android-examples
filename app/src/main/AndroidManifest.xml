@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.jawg">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_jawg_gradient"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_jawg_gradient"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SimpleMapActivity"></activity>
+        <activity android:name=".DifferentStylesActivity"></activity>
+        <activity android:name=".GeometryMapActivity"></activity>
+        <activity android:name=".PopupMapActivity"></activity>
+        <activity android:name=".SwitchLanguagesActivity"></activity>
+        <activity android:name=".CustomStyleActivity"></activity>
+        <activity android:name=".MarkerMapActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
