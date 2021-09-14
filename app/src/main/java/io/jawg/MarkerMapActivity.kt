@@ -29,7 +29,7 @@ class MarkerMapActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Get the Mapbox context.
-        Mapbox.getInstance(this, null)
+        Mapbox.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_simple_map)
 
@@ -63,6 +63,7 @@ class MarkerMapActivity : AppCompatActivity() {
                 this.symbolManager?.addClickListener {
                     // Display information
                     Toast.makeText(this, "Opera house", Toast.LENGTH_LONG).show();
+                    true
                 }
             }
         }

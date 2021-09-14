@@ -23,7 +23,7 @@ class SwitchLanguagesActivity : AppCompatActivity(), AdapterView.OnItemSelectedL
         super.onCreate(savedInstanceState)
 
         // Get the Mapbox context.
-        Mapbox.getInstance(this, null)
+        Mapbox.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_switch_languages)
 

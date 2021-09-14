@@ -1,6 +1,6 @@
-# Integrating Jawg Maps with Mapbox GL Android : Examples
+# Integrating Jawg Maps with MapLibre GL Android : Examples
 
-Welcome to our example repository to integrate Jawg with Mapbox GL Android.
+Welcome to our example repository to integrate Jawg with MapLibre GL Android.
 
 Don't forget to set your access token in [strings.xml](./app/src/main/res/values/strings.xml).
 If you don't have any access token yet, get one on [Jawg Lab](https://jawg.io/lab).
