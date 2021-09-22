@@ -23,6 +23,7 @@
         <activity android:name=".SwitchLanguagesActivity"></activity>
         <activity android:name=".CustomStyleActivity"></activity>
         <activity android:name=".MarkerMapActivity"></activity>
+        <activity android:name=".DataMapActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

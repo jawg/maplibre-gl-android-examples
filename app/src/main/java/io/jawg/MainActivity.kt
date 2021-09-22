@@ -48,5 +48,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MarkerMapActivity::class.java)
             startActivity(intent)
         }
+
+        buttonToDataMap.setOnClickListener {
+            val intent = Intent(this, DataMapActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
