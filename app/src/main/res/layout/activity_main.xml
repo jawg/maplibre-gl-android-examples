@@ -141,16 +141,23 @@
                     android:fontFamily="@font/crete_round" />
 
                 <Button
-                    android:id="@+id/buttonInvisible"
+                    android:id="@+id/buttonToDataMap"
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Invisible example"
-                    android:background="@color/colorPrimary"
-                    android:textColor="#FFF"
                     android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
                     android:fontFamily="@font/crete_round"
-                    android:visibility="invisible" />
+                    android:text="Add Your Data"
+                    android:textColor="#FFF"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Button" />
 
             </LinearLayout>
 
