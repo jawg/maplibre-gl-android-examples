@@ -10,10 +10,11 @@
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        mapbox:mapbox_cameraTargetLat="48.8534"
-        mapbox:mapbox_cameraTargetLng="2.3488"
-        mapbox:mapbox_cameraZoom="10"
-        mapbox:mapbox_uiLogo="false"
-        mapbox:mapbox_uiAttribution="true" />
+        mapbox:maplibre_cameraTargetLat="48.8534"
+        mapbox:maplibre_cameraTargetLng="2.3488"
+        mapbox:maplibre_cameraZoom="10"
+        mapbox:maplibre_uiAttribution="true"
+        mapbox:maplibre_uiAttributionMarginLeft="5dp"
+        mapbox:maplibre_uiLogo="false" />
 
 </FrameLayout>

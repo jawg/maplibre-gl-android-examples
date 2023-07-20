@@ -1,25 +1,25 @@
-# Integrating Jawg Maps with MapLibre GL Android : Examples
+# Integrating Jawg Maps with MapLibre GL Android: Examples
 
 Welcome to our example repository to integrate Jawg with MapLibre GL Android.
 
 Don't forget to set your access token in [strings.xml](./app/src/main/res/values/strings.xml).
 If you don't have any access token yet, get one on [Jawg Lab](https://jawg.io/lab).
 
-## Examples description :
+## Examples description:
 
-[SimpleMapActivity](./app/src/main/java/io/jawg/SimpleMapActivity.kt) : Displaying a simple dynamic map.
+[SimpleMapActivity](./app/src/main/kotlin/io/jawg/example/maplibre/SimpleMapActivity.kt) : Displaying a simple dynamic map.
 
-[MarkerMapActivity](./app/src/main/java/io/jawg/MarkerMapActivity.kt) : Adding a simple marker on a map.
+[MarkerMapActivity](./app/src/main/kotlin/io/jawg/example/maplibre/MarkerMapActivity.kt) : Adding a simple marker on a map.
 
-[PopupMapActivity](./app/src/main/java/io/jawg/PopupMapActivity.kt) : Adding a popup with markers on a map.
+[PopupMapActivity](./app/src/main/kotlin/io/jawg/example/maplibre/PopupMapActivity.kt) : Adding a popup with markers on a map.
 
-[GeometryMapActivity](./app/src/main/java/io/jawg/GeometryMapActivity.kt) : Adding geometry on your map with GeoJSON.
+[GeometryMapActivity](./app/src/main/kotlin/io/jawg/example/maplibre/GeometryMapActivity.kt) : Adding geometry on your map with GeoJSON.
 
-[SwitchLanguagesActivity](./app/src/main/java/io/jawg/SwitchLanguagesActivity.kt) : Changing your map's language.
+[SwitchLanguagesActivity](./app/src/main/kotlin/io/jawg/example/maplibre/SwitchLanguagesActivity.kt) : Changing your map's language.
 
-[DifferentStylesActivity](./app/src/main/java/io/jawg/DifferentStylesActivity.kt) : Changing your map style using our default styles.
+[DifferentStylesActivity](./app/src/main/kotlin/io/jawg/example/maplibre/DifferentStylesActivity.kt) : Changing your map style using our default styles.
 
-[CustomStyleActivity](./app/src/main/java/io/jawg/CustomStyleActivity.kt) : Using a custom style from [Jawg Lab](https://jawg.io/lab) on your map.
+[CustomStyleActivity](./app/src/main/kotlin/io/jawg/example/maplibre/CustomStyleActivity.kt) : Using a custom style from [Jawg Lab](https://jawg.io/lab) on your map.
 
 > You'll need to set a style ID in `CustomStyleActivity` to make this example work.
 >

@@ -1,9 +1,7 @@
-package io.jawg
+package io.jawg.example.maplibre
 
-import android.os.Build
+import android.app.Activity
 import android.os.Bundle
-import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import com.mapbox.geojson.Feature
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.MapView
@@ -12,36 +10,30 @@ import com.mapbox.mapboxsdk.style.layers.Property
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 
-class GeometryMapActivity : AppCompatActivity() {
-    private var mapView: MapView? = null
+class GeometryMapActivity : Activity() {
 
-    // Returns the Jawg url depending on the style given (jawg-streets by default)
-    // See /res/values/strings which contains the url, the list of styles and your access token.
-    private fun makeStyleUrl(style: String = "jawg-streets"): String {
-        return "${getString(R.string.jawg_styles_url) + style}.json?access-token=${getString(R.string.jawg_access_token)}";
-    }
+    private lateinit var mapView: MapView
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Get your access-token on the Lab: https://www.jawg.io/lab/access-tokens
+        val accessToken = getString(R.string.jawg_access_token)
+        val styleId = "jawg-dark"
+        val styleUrl = "https://api.jawg.io/styles/$styleId.json?access-token=$accessToken"
 
         // Get the Mapbox context.
         Mapbox.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_geometry_map)
 
-        // We get the map view to set its style with the desired Jawg url.
+        // We get the map view to set its style with the desired Jawg URL.
         mapView = findViewById(R.id.mapView)
-        mapView?.onCreate(savedInstanceState)
-        mapView?.getMapAsync { map ->
-
-            map.setStyle(makeStyleUrl()) {
-                // Map fully loaded in this scope.
-                // Update attributions position
-                map.uiSettings.setAttributionMargins(15, 0, 0, 15)
-
-                // We create a GeoJSON polygon containing the coordinates we want to be parsed.
-                val polygonFeatureJson =
+        mapView.onCreate(savedInstanceState)
+        mapView.getMapAsync { map ->
+            map.setStyle(styleUrl) { style ->
+                // Once the style is loaded we create a GeoJSON polygon of Paris boundaries.
+                val geojson =
                     """
                     {
                         "type": "Feature",
@@ -81,55 +73,55 @@ class GeometryMapActivity : AppCompatActivity() {
                     """
 
                 // Create feature object from the GeoJSON we declared.
-                val parisBoundariesFeature = Feature.fromJson(polygonFeatureJson)
+                val parisBoundariesFeature = Feature.fromJson(geojson)
                 // Create a GeoJson Source from our feature.
-                val geoJsonSource = GeoJsonSource("geojson-paris-boundaries", parisBoundariesFeature)
-                // Add it to the map
-                it.addSource(geoJsonSource)
+                val geojsonSource = GeoJsonSource("paris-boundaries", parisBoundariesFeature)
+                // Add the source to the style
+                style.addSource(geojsonSource)
 
                 // Create a layer with the desired style for our source.
-                val layer = LineLayer("linelayer", "geojson-paris-boundaries")
+                val layer = LineLayer("paris-boundaries", "paris-boundaries")
                     .withProperties(
                         PropertyFactory.lineCap(Property.LINE_CAP_SQUARE),
                         PropertyFactory.lineJoin(Property.LINE_JOIN_MITER),
-                        PropertyFactory.lineOpacity(.7f),
+                        PropertyFactory.lineOpacity(0.7f),
                         PropertyFactory.lineWidth(4f),
-                        PropertyFactory.lineColor(getColor(R.color.colorPrimaryDark))
+                        PropertyFactory.lineColor("#0094ff")
                     )
-                // Add it to the map
-                it.addLayer(layer)
+                // Add the layer at the end
+                style.addLayer(layer)
             }
         }
     }
 
     override fun onStart() {
         super.onStart()
-        mapView?.onStart()
+        mapView.onStart()
     }
 
     override fun onResume() {
         super.onResume()
-        mapView?.onResume()
+        mapView.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        mapView?.onPause()
+        mapView.onPause()
     }
 
     override fun onStop() {
         super.onStop()
-        mapView?.onStop()
+        mapView.onStop()
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
-        mapView?.onLowMemory()
+        mapView.onLowMemory()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mapView?.onDestroy()
+        mapView.onDestroy()
     }
 
 }
