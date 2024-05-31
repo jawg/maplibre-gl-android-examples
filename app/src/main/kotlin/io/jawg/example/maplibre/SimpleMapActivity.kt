@@ -2,8 +2,8 @@ package io.jawg.example.maplibre
 
 import android.app.Activity
 import android.os.Bundle
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.maps.MapView
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
 
 
 class SimpleMapActivity : Activity() {
@@ -13,15 +13,15 @@ class SimpleMapActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Init MapLibre
+        MapLibre.getInstance(this)
+        // Then set the activity layout
+        setContentView(R.layout.activity_simple_map)
+
         // Get your access-token on the Lab: https://www.jawg.io/lab/access-tokens
         val accessToken = getString(R.string.jawg_access_token)
         val styleId = "jawg-streets"
         val styleUrl = "https://api.jawg.io/styles/$styleId.json?access-token=$accessToken"
-
-        // Get the Mapbox context.
-        Mapbox.getInstance(this)
-        // Then set the activity layout
-        setContentView(R.layout.activity_simple_map)
 
         // We get the map view to set its style with the desired Jawg url.
         mapView = findViewById(R.id.mapView)

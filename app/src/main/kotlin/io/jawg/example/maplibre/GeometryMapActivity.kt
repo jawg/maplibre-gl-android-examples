@@ -2,13 +2,13 @@ package io.jawg.example.maplibre
 
 import android.app.Activity
 import android.os.Bundle
-import com.mapbox.geojson.Feature
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.maps.MapView
-import com.mapbox.mapboxsdk.style.layers.LineLayer
-import com.mapbox.mapboxsdk.style.layers.Property
-import com.mapbox.mapboxsdk.style.layers.PropertyFactory
-import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
+import org.maplibre.android.style.layers.LineLayer
+import org.maplibre.android.style.layers.Property
+import org.maplibre.android.style.layers.PropertyFactory
+import org.maplibre.android.style.sources.GeoJsonSource
+import org.maplibre.geojson.Feature
 
 class GeometryMapActivity : Activity() {
 
@@ -22,8 +22,8 @@ class GeometryMapActivity : Activity() {
         val styleId = "jawg-dark"
         val styleUrl = "https://api.jawg.io/styles/$styleId.json?access-token=$accessToken"
 
-        // Get the Mapbox context.
-        Mapbox.getInstance(this)
+        // Init MapLibre
+        MapLibre.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_geometry_map)
 

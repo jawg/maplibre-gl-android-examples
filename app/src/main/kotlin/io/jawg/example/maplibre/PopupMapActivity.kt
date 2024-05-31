@@ -7,13 +7,13 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import com.google.gson.JsonParser
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.geometry.LatLng
-import com.mapbox.mapboxsdk.maps.MapView
-import com.mapbox.mapboxsdk.plugins.annotation.Symbol
-import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager
-import com.mapbox.mapboxsdk.plugins.annotation.SymbolOptions
-import com.mapbox.mapboxsdk.utils.BitmapUtils
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
+import org.maplibre.android.geometry.LatLng
+import org.maplibre.android.plugins.annotation.Symbol
+import org.maplibre.android.plugins.annotation.SymbolManager
+import org.maplibre.android.plugins.annotation.SymbolOptions
+import org.maplibre.android.utils.BitmapUtils
 
 class PopupMapActivity : Activity() {
 
@@ -36,8 +36,8 @@ class PopupMapActivity : Activity() {
         val styleId = "jawg-streets"
         val styleUrl = "https://api.jawg.io/styles/$styleId.json?access-token=$accessToken"
 
-        // Get the Mapbox context.
-        Mapbox.getInstance(this)
+        // Init MapLibre
+        MapLibre.getInstance(this)
         // Then set the activity layout.
         setContentView(R.layout.activity_popup_map)
 

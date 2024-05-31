@@ -6,8 +6,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.activity.ComponentActivity
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.maps.MapView
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
 
 class DifferentStylesActivity : ComponentActivity(), AdapterView.OnItemSelectedListener {
 
@@ -28,8 +28,8 @@ class DifferentStylesActivity : ComponentActivity(), AdapterView.OnItemSelectedL
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Get the Mapbox context.
-        Mapbox.getInstance(this)
+        // Init MapLibre
+        MapLibre.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_different_styles)
 

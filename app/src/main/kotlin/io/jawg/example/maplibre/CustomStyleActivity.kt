@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.maps.MapView
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
 
 class CustomStyleActivity : Activity() {
 
@@ -34,9 +34,8 @@ class CustomStyleActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Get and create the Mapbox context.
-        Mapbox.getInstance(this)
-
+        // Init MapLibre
+        MapLibre.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_custom_styles)
 

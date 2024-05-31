@@ -3,14 +3,13 @@ package io.jawg.example.maplibre
 import android.app.Activity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
-import com.mapbox.mapboxsdk.Mapbox
-import com.mapbox.mapboxsdk.maps.MapView
-import com.mapbox.mapboxsdk.style.layers.Property
-import com.mapbox.mapboxsdk.style.layers.PropertyFactory
-import com.mapbox.mapboxsdk.style.layers.PropertyValue
-import com.mapbox.mapboxsdk.style.layers.SymbolLayer
-import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
-import com.mapbox.mapboxsdk.utils.BitmapUtils
+import org.maplibre.android.MapLibre
+import org.maplibre.android.maps.MapView
+import org.maplibre.android.style.layers.Property
+import org.maplibre.android.style.layers.PropertyFactory
+import org.maplibre.android.style.layers.SymbolLayer
+import org.maplibre.android.style.sources.GeoJsonSource
+import org.maplibre.android.utils.BitmapUtils
 import java.net.URI
 
 class DataMapActivity : Activity() {
@@ -29,8 +28,8 @@ class DataMapActivity : Activity() {
         val styleId = "jawg-streets"
         val styleUrl = "https://api.jawg.io/styles/$styleId.json?access-token=$accessToken"
 
-        // Get the Mapbox context.
-        Mapbox.getInstance(this)
+        // Init MapLibre
+        MapLibre.getInstance(this)
         // Then set the activity layout
         setContentView(R.layout.activity_data_map)
 
