@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:maplibre="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        mapbox:maplibre_cameraTargetLat="51.5"
-        mapbox:maplibre_cameraTargetLng="-0.11"
-        mapbox:maplibre_cameraZoom="11"
-        mapbox:maplibre_uiAttribution="true"
-        mapbox:maplibre_uiAttributionMarginLeft="5dp"
-        mapbox:maplibre_uiLogo="false" />
+        maplibre:maplibre_cameraTargetLat="51.5"
+        maplibre:maplibre_cameraTargetLng="-0.11"
+        maplibre:maplibre_cameraZoom="11"
+        maplibre:maplibre_uiAttribution="true"
+        maplibre:maplibre_uiAttributionMarginLeft="5dp"
+        maplibre:maplibre_uiLogo="false" />
 
 
     <LinearLayout
