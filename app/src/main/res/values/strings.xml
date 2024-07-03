@@ -6,6 +6,7 @@
     <!-- styles -->
     <string-array name="jawg_styles">
         <item>jawg-streets</item>
+        <item>jawg-lagoon</item>
         <item>jawg-terrain</item>
         <item>jawg-sunny</item>
         <item>jawg-dark</item>
