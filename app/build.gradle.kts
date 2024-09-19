@@ -47,6 +47,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("org.maplibre.gl:android-sdk:11.1.0")
-    implementation("org.maplibre.gl:android-plugin-annotation-v9:3.0.0")
+    implementation("org.maplibre.gl:android-sdk:11.4.0")
+    implementation("org.maplibre.gl:android-plugin-annotation-v9:3.0.1")
 }

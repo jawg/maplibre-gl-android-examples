@@ -62,7 +62,8 @@ class DataMapActivity : Activity() {
                     .withProperties(
                         PropertyFactory.iconImage(MARKER_ICON),
                         PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM),
-                        PropertyFactory.iconAllowOverlap(true)
+                        PropertyFactory.iconAllowOverlap(true),
+                        PropertyFactory.iconIgnorePlacement(true)
                     )
 
                 // Add the layer to the map
